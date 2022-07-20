@@ -1,0 +1,25 @@
+<%= form_with(model: winemaker_winetasted) do |form| %>
+  <% if winemaker_winetasted.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(winemaker_winetasted.errors.count, "error") %> prohibited this winemaker_winetasted from being saved:</h2>
+
+      <ul>
+        <% winemaker_winetasted.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= form.label :winetasted_id %>
+    <%= form.text_field :winetasted_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :winemaker_id %>
+    <%= form.text_field :winemaker_id %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

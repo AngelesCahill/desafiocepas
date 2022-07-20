@@ -1,0 +1,23 @@
+<div  id="<%= dom_id winetasted %>" class="col-sm-3">
+  <div class="card">
+    <p>
+      <strong>ID:</strong>
+      <%= winetasted.id %>
+    </p>
+    <p>
+      <strong>Name:</strong>
+      <%= winetasted.name %>
+    </p>
+
+    <p>
+      <strong>Strain:</strong>
+      <%= winetasted.strain %>
+    </p>
+
+    <p>
+      <strong>Percentage:</strong>
+      <%= winetasted.percentage %>
+    </p>
+  </div>
+  <%= link_to "Agregar nota", new_winemaker_path %>
+</div>

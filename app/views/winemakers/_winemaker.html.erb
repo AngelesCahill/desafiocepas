@@ -1,0 +1,16 @@
+<div id="<%= dom_id winemaker %>">
+  <div class="card text-center" style="width: 18rem;">
+    <img src="./assets/descarga.png" class="card-img-top ms-auto me-auto" alt="..." style="width: 10rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= winemaker.name %></h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Age: <%= winemaker.age %></li>
+            <li class="list-group-item">Nacionalidad: <%= winemaker.nationality %></li>
+            <li class="list-group-item">Nota: <%= winemaker.record %></li>
+            <li class="list-group-item">Revista: <%= winemaker.magazine %></li>
+            <li class="list-group-item">Cargo: <%= winemaker.position %></li>
+          </ul>
+        <%= link_to "Show this winemaker", winemaker,class:"btn btn-primary" %>
+      </div>
+  </div>
+</div>

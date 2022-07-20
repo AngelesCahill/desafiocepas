@@ -1,0 +1,36 @@
+<p style="color: green"><%= notice %></p>
+<h1> winemaker_winetasted INDEX</h1>
+<h1>Notas de Vinos Catados por Peter</h1>
+<%= link_to "New winemaker winetasteds", new_winemaker_winetasted_path %>
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Wine-Maker</th>
+      <th>Wine-Maker Id</th>
+      <th>Record</th>
+      <th>Wine</th>
+      <th>Wine Id</th>
+      <th colspan="3"></th>
+      <th colspan="3"></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @winemaker_winetasteds.each do |winemaker_winetasted| %>
+      <tr>
+        <td><%= winemaker_winetasted.winemaker.name %></td>
+        <td><%= winemaker_winetasted.winemaker.id %></td>
+        <td><%= winemaker_winetasted.winemaker.record %></td>
+        <td><%= winemaker_winetasted.winetasted %></td>
+        <td><%= winemaker_winetasted.winetasted_id %></td>
+        <td><%= link_to 'Show', winemaker_winetasted %></td>
+        <td><%= link_to 'Edit', edit_winemaker_winetasted_path(winemaker_winetasted) %></td>
+        <td><%= link_to 'Destroy', winemaker_winetasted, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

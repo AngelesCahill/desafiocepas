@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+<%= link_to "New winemaker winetasteds", new_winemaker_winetasted_path %><br>
+<%= link_to "New winetasted", new_winetasted_path %>
+<h1>Lista de Vinos probados</h1>
+
+<div id="winetasteds" class="row my-5 mx-3">
+  <% @winetasteds.each do |winetasted| %>
+    <%= render winetasted %>
+    <p>
+      <%= link_to "Show this winetasted", winetasted %>
+    </p>
+  <% end %>
+</div>
+
+
