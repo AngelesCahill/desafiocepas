@@ -1,4 +1,5 @@
 class WinemakerWinetastedsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_winemaker_winetasted, only: %i[ show edit update destroy ]
 
   # GET /winemaker_winetasteds or /winemaker_winetasteds.json
